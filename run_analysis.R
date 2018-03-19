@@ -43,8 +43,8 @@ tidy_data <- function(dataset) {
 }
 
 data <- rbind(tidy_data("train"), tidy_data("test"))
-write.csv(data, "tidy_data.csv")
+write.table(data, "tidy_data.txt", row.name=FALSE)
 
 # the average of each mean and standard deviation value grouped by subject and activity
 mean_data <- data %>% group_by(activity, subject) %>% summarize_all(funs(mean))
-write.csv(mean_data, "mean_data.csv")
+write.table(mean_data, "mean_data.text", row.name=FALSE)
