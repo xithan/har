@@ -47,4 +47,4 @@ write.table(data, "tidy_data.txt", row.name=FALSE)
 
 # the average of each mean and standard deviation value grouped by subject and activity
 mean_data <- data %>% group_by(activity, subject) %>% summarize_all(funs(mean))
-write.table(mean_data, "mean_data.text", row.name=FALSE)
+write.table(mean_data, "mean_data.txt", row.name=FALSE)
